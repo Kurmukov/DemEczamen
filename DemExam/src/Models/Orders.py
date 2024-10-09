@@ -14,4 +14,4 @@ class Orders(Base):
     drink_id = ForeignKeyField(Drinks)
     food_id = ForeignKeyField(Foods)
     shift_id = ForeignKeyField(Shifts)
-    status_id = ForeignKeyField(Statuses)
+    status_id= ForeignKeyField(Statuses)

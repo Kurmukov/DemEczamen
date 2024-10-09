@@ -1,7 +1,7 @@
 from src.Models.Shifts import *
 from src.Controllers.UserController import UserController
 
-class ShiftController():
+class Shift_Controller():
     #создание СМЕНЫ
     def add(self,datetime,cook,oficiant_1,oficiant_2):
         cook_id = UserController.show(cook)
@@ -16,7 +16,7 @@ class ShiftController():
         return Shifts.select().execute()
 
 if __name__ == "__main__":
-    sh = ShiftController()
+    sh = Shift_Controller()
     for row in sh.get():
         print(row.id, row.cook_id.login,row.oficiant_1_id.login,row.oficiant_2_id.login)
     print('----------------------')
